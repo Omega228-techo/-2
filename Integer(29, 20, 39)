@@ -22,6 +22,32 @@ int main() {
 }
 
 Integer 20
-
+#include <iostream>
+int main() {
+    // Задаємо кількість секунд
+    long long N = 25;
+    std::cout << "Минуло секунд з початку доби: " << N << "\n\n";
+    // Цілочисельне ділення відкидає зайве
+    long long hours = N / 3600; 
+    // Результат
+    std::cout << "Кількість повних годин, що минули: " << hours << std::endl;
+    return 0;
+}
 
 Integer 39
+#include <iostream>
+
+int main() {
+    // Задаємо значення
+    long long N = 34; // Загальна кількість книг
+    long long K = 6;  // Місткість однієї полиці
+    std::cout << "Задані значення: всього книг (N) = " << N 
+              << ", місткість полиці (K) = " << K << "\n\n";
+    long long full_shelves = N / K;
+    // Остача від ділення (%) знаходить кількість книг на неповній полиці
+    long long leftover_books = N % K;
+    // Результат
+    std::cout << "Повністю заповнених полиць: " << full_shelves << std::endl;
+    std::cout << "Книг на неповній полиці: " << leftover_books << std::endl;
+    return 0;
+}
